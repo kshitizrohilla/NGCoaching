@@ -1,0 +1,37 @@
+/* src/Components/TopBar.css */
+.topbar {
+  background-color: #252525;
+  color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: orange;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 5px 10px;
+}
+
+.nav-link:hover {
+  background-color: transparent;
+  border-radius: 5px;
+  color: orange;
+}

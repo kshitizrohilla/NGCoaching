@@ -1,0 +1,60 @@
+.student-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.calendar-container {
+  margin-bottom: 20px;
+}
+
+.react-calendar {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.react-calendar__tile {
+  padding: 10px;
+  font-weight: normal;
+  color: black;
+}
+
+.student-schedule {
+  color: red;
+}
+
+.react-calendar__tile.highlight {
+  background: #ffa500; /* Orange background for highlighted dates */
+  border-radius: 0;
+  font-weight: bold;
+}
+
+.training-info {
+  text-align: center;
+}
+
+.training-date-range {
+  margin: 10px 0;
+}
+
+.error-message {
+  color: red;
+}

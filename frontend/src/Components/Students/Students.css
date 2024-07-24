@@ -1,0 +1,39 @@
+/* Students.css */
+.students {
+  padding: 20px;
+}
+
+.students h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.student-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.student-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.student-name {
+  text-align: left;
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.student-email,
+.student-age,
+.student-coach {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}

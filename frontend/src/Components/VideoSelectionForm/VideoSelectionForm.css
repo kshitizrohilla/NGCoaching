@@ -1,0 +1,129 @@
+/* VideoSelectionForm.css */
+.form-container {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
+  padding: 40px;
+  color: #333;
+}
+
+h1 {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="date"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+p .status-message {
+  color: limegreen;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.card-video iframe {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #444;
+}
+
+.card-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card-tag {
+  background: #e9ecef;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  color: #495057;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.submit-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.submit-button:hover {
+  background: #0056b3;
+}
