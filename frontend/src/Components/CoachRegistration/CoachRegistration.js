@@ -11,7 +11,7 @@ function CoachRegistration() {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/register-coaches', {
+      const response = await axios.post('/api/coaches/register', {
         name,
         email
       });

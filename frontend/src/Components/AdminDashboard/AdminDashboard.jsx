@@ -21,7 +21,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     async function fetchVideos() {
       try {
-        const response = await axios.get('http://localhost:5000/fetch-videos');
+        const response = await axios.get('/api/videos');
         setVideos(response.data);
       } catch (err) {
         setError(err.message);

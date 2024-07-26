@@ -13,7 +13,7 @@ const AddVideo = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/insert-videos', {
+      const response = await axios.post('/api/videos/create', {
         url,
         title,
         description,

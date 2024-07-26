@@ -15,7 +15,7 @@ function VideoSelectionForm() {
   useEffect(() => {
     async function fetchVideos() {
       try {
-        const response = await axios.get('http://localhost:5000/fetch-videos');
+        const response = await axios.get('/api/videos');
         setVideos(response.data);
       } catch (err) {
         setError(err.message);
@@ -54,7 +54,7 @@ function VideoSelectionForm() {
 
     console.log('Created Object:', formData);
 
-    axios.post('http://localhost:5000/create-sessions', formData)
+    axios.post('/api/sessions/create', formData)
       .then(response => {
         setCreationStatus('New session created successfully');
         console.log('Submission successful:', response.data);

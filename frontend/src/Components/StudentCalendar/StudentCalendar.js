@@ -18,7 +18,7 @@ const StudentCalendar = () => {
           return;
         }
 
-        const response = await axios.post('http://localhost:5000/getStudentId', { name: studentName });
+        const response = await axios.post('/api/student/get-id', { name: studentName });
         const id = response.data.id;
         setError(null);
 
@@ -31,7 +31,7 @@ const StudentCalendar = () => {
 
     const fetchTrainingsByStudentId = async (id) => {
       try {
-        const response = await axios.get('http://localhost:5000/fetch-trainings');
+        const response = await axios.get('/api/trainings');
         const trainings = response.data;
 
         // Filter trainings containing the student ID

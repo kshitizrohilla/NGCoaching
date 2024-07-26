@@ -10,7 +10,7 @@ const TrainingsDashboard = () => {
   useEffect(() => {
     async function fetchTrainings() {
       try {
-        const response = await axios.get('http://localhost:5000/fetch-trainings');
+        const response = await axios.get('/api/trainings');
         setTrainings(response.data);
 
         // Collect all student IDs from trainings
