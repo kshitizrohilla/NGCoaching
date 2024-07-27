@@ -1,0 +1,86 @@
+/* StudentDashboard.css */
+
+/* Custom styles for the calendar tile highlighting */
+.react-calendar .react-calendar__tile {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.highlighted-date {
+  background-color: #f97316; /* Orange background color for highlighted dates */
+  color: white; /* White text color for highlighted dates */
+  font-weight: bold; /* Make the date text bold */
+  padding: 0.5rem; /* Add padding for better visual effect */
+  display: flex; /* Use flexbox for centering text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  border-radius: 0; /* Remove border radius */
+}
+
+/* Ensure the calendar has a consistent border and shadow */
+.react-calendar {
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 0 auto; /* Center the calendar */
+  width: 100%; /* Full width */
+  max-width: 700px; /* Increase max width for larger screens */
+}
+
+/* Custom styles for the calendar navigation buttons */
+.react-calendar__navigation button {
+  background-color: transparent; /* Remove background color */
+  color: #3b82f6; /* Blue text color for navigation buttons */
+  border: none; /* Remove default border */
+  padding: 0.5rem 1rem; /* Padding for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #e5e7eb; /* Light gray background on hover */
+  color: #2563eb; /* Darker blue text color on hover */
+}
+
+/* Custom styles for the current month and year display */
+.react-calendar__month-view__weekdays {
+  background-color: #f1f5f9; /* Light gray background for weekdays */
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: #4b5563; /* Dark gray text color for weekdays */
+}
+
+/* Custom styles for the training sessions list */
+.training-card {
+  background-color: #ffffff; /* White background for cards */
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 0.5rem; /* Rounded corners for cards */
+  padding: 1.5rem; /* Padding inside cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 1.5rem; /* Margin between cards */
+}
+
+/* Center align calendar container and adjust size */
+.react-calendar-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 2rem; /* Space below the calendar */
+  width: 100%; /* Full width */
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+  .react-calendar-container {
+    width: 100%;
+  }
+  .react-calendar {
+    width: 100%; /* Full width for larger screens */
+    max-width: 700px; /* Max width to keep it from growing too large */
+  }
+}
+
+@media (max-width: 639px) {
+  .react-calendar {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
