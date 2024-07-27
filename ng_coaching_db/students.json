@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "66a5271234f9a5406eb62a06",
+    "email": "lara@student.com",
+    "name": "Lara Singh",
+    "age": 20,
+    "userType": "student",
+    "password": "lara",
+    "__v": 0
+  },
+  {
+    "_id": "66a5272434f9a5406eb62a08",
+    "email": "Julie@student.com",
+    "name": "Julie Singh",
+    "age": 21,
+    "userType": "student",
+    "password": "julie",
+    "__v": 0
+  },
+  {
+    "_id": "66a5273e34f9a5406eb62a0a",
+    "email": "roger@student.com",
+    "name": "Roger Doe",
+    "age": 25,
+    "userType": "student",
+    "password": "roger",
+    "__v": 0
+  }
+]

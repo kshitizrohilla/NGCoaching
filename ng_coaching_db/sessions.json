@@ -1,0 +1,59 @@
+[
+  {
+    "_id": "66a52478cd39eda1627000e7",
+    "sessionName": "Tennis Session",
+    "startDate": "2024-08-01",
+    "endDate": "2024-08-07",
+    "videos": [
+      {
+        "videoId": "O7YPIppmHYY",
+        "url": "https://www.youtube.com/watch?v=O7YPIppmHYY",
+        "_id": "66a52478cd39eda1627000e8"
+      },
+      {
+        "videoId": "NWYy94KJvkA",
+        "url": "https://www.youtube.com/watch?v=NWYy94KJvkA",
+        "_id": "66a52478cd39eda1627000e9"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66a524a2cd39eda1627000eb",
+    "sessionName": "Basketball Session",
+    "startDate": "2024-09-10",
+    "endDate": "2024-09-20",
+    "videos": [
+      {
+        "videoId": "CMQp0bwjokw",
+        "url": "https://www.youtube.com/watch?v=CMQp0bwjokw&t=127s",
+        "_id": "66a524a2cd39eda1627000ec"
+      },
+      {
+        "videoId": "oFz7Dnj0nqc",
+        "url": "https://www.youtube.com/watch?v=oFz7Dnj0nqc",
+        "_id": "66a524a2cd39eda1627000ed"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66a524b8cd39eda1627000ef",
+    "sessionName": "Soccer Session",
+    "startDate": "2024-09-20",
+    "endDate": "2024-09-25",
+    "videos": [
+      {
+        "videoId": "bSzH-o9V8ww",
+        "url": "https://www.youtube.com/watch?v=bSzH-o9V8ww",
+        "_id": "66a524b8cd39eda1627000f0"
+      },
+      {
+        "videoId": "Xim8-lUZnsA",
+        "url": "https://www.youtube.com/watch?v=Xim8-lUZnsA",
+        "_id": "66a524b8cd39eda1627000f1"
+      }
+    ],
+    "__v": 0
+  }
+]

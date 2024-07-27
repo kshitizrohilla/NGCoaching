@@ -1,0 +1,10 @@
+[
+  {
+    "_id": "66a5263acd39eda162700132",
+    "name": "coach",
+    "email": "coach@coach.com",
+    "password": "coach",
+    "userType": "coach",
+    "__v": 0
+  }
+]

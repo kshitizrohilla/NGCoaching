@@ -1,0 +1,36 @@
+[
+  {
+    "_id": "66a528dd91dee9f0776a31e1",
+    "sessionName": "First Training",
+    "startDate": "2024-07-20 00:00:00",
+    "endDate": "2024-07-25 00:00:00",
+    "students_list": [
+      "66a5271234f9a5406eb62a06",
+      "66a5272434f9a5406eb62a08"
+    ],
+    "videos_list": [
+      "https://www.youtube.com/watch?v=CMQp0bwjokw&t=127s",
+      "https://www.youtube.com/watch?v=oFz7Dnj0nqc",
+      "https://www.youtube.com/watch?v=O7YPIppmHYY",
+      "https://www.youtube.com/watch?v=NWYy94KJvkA"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "66a5299091dee9f0776a31f3",
+    "sessionName": "Second training",
+    "startDate": "2024-08-01 00:00:00",
+    "endDate": "2024-08-10 00:00:00",
+    "students_list": [
+      "66a5273e34f9a5406eb62a0a",
+      "66a5272434f9a5406eb62a08"
+    ],
+    "videos_list": [
+      "https://www.youtube.com/watch?v=CMQp0bwjokw&t=127s",
+      "https://www.youtube.com/watch?v=O7YPIppmHYY",
+      "https://www.youtube.com/watch?v=CMQp0bwjokw&t=127s",
+      "https://www.youtube.com/watch?v=oFz7Dnj0nqc"
+    ],
+    "__v": 0
+  }
+]
