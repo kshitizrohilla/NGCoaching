@@ -1,9 +1,8 @@
 const express = require('express');
-const { fetchCoaches, registerCoach } = require('../controllers/coachController');
-
 const router = express.Router();
+const { registerCoach } = require('../controllers/coachController');
 
-router.get('/', fetchCoaches);
+// Register a new coach
 router.post('/register', registerCoach);
 
 module.exports = router;

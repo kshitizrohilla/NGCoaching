@@ -1,30 +1,10 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const sessionSchema = mongoose.Schema({
-    sessionName: {
-        type: String,
-        required: true
-      },
-      startDate: {
-        type: String,
-        required: true
-      },
-      endDate: {
-        type: String,
-        required: true
-      },
-      videos: [
-        {
-          videoId: {
-            type: String,
-            required: true
-          },
-          url: {
-            type: String,
-            required: true
-          }
-        }
-      ]
+const sessionSchema = new Schema({
+    sessionName: { type: String, required: true },
+    sessionTags: [{ type: String }],
+    excercise: [{ type: Schema.Types.ObjectId, ref: 'Exercise' }]
 });
 
-module.exports = mongoose.model("Session", sessionSchema)
+module.exports = mongoose.model('Session', sessionSchema);

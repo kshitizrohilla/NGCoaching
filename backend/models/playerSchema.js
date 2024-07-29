@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const coachSchema = new Schema({
+const playerSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  players: [{ type: Schema.Types.ObjectId, ref: 'Player' }]
+  age: { type: Number, required: true },
+  coach: { type: Schema.Types.ObjectId, ref: 'Coach' }
 });
 
-const Coach = mongoose.model('Coach', coachSchema);
-module.exports = Coach;
+const Player = mongoose.model('Player', playerSchema);
+module.exports = Player;
