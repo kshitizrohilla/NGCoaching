@@ -1,0 +1,36 @@
+#whole-calendar {
+  filter: invert(1);
+}
+
+#no-white-background div {
+  background: transparent !important;
+  color: #E16F00 !important;
+}
+
+#player-calendar-heading {
+  background: transparent !important;
+  color: black !important;
+  font-size: 50px !important;
+  margin-bottom: 50px !important;
+}
+
+#nxt-prv-btns {
+  background: #005AFF !important;
+}
+
+.text-black {
+  font-weight: bold !important;
+}
+
+#remove-white-bg {
+  background: transparent;
+}
+
+
+#remove-white-bg button {
+  color: white !important;
+}
+
+#remove-white-background {
+  background: transparent !important;
+}
