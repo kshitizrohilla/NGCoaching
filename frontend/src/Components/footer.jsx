@@ -49,6 +49,9 @@ const Footer = () => {
         <aside>
             <p>Copyright © {new Date().getFullYear()} - All right reserved by NG Coaching</p>
         </aside>
+        <aside className='mt-1'>
+            <p className='text-lg'>Designed & Developed by <span className=' font-bold text-pink-400'>Kunal Dutta • Kshitiz Rohilla</span></p>
+        </aside>
     </footer>
   )
 }

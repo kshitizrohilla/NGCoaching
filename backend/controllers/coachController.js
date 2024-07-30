@@ -37,5 +37,4 @@ const registerCoach = asyncHandler(async (req, res) => {
     }
 });
 
-
 module.exports = { fetchCoaches, registerCoach };

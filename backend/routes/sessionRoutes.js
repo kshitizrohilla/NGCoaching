@@ -5,6 +5,6 @@ const { createSession, fetchPlayerSessions, fetchCoachSessions, fetchAllSessions
 router.post('/create', createSession);
 router.get('/all', fetchAllSessions);
 router.get('/player/:playerId/sessions', fetchPlayerSessions);
-router.get('/coach/:coachId/sessions', fetchCoachSessions);
+router.get('/:coachId/sessions', fetchCoachSessions);
 
 module.exports = router;

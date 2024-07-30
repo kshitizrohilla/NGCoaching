@@ -20,8 +20,7 @@ const fetchAllPlayers = asyncHandler(async (req, res) => {
 });
 
 const registerPlayer = asyncHandler(async (req, res) => {
-    const { coachId } = req.params;
-    const { name, email, password, age } = req.body;
+    const { name, email, password, age, coachId } = req.body;
 
     try {
         const coach = await Coach.findById(coachId);

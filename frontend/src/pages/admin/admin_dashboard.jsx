@@ -22,7 +22,7 @@ const AdminDashboard = () => {
     <AdminNav />
     <main className='w-screen p-20 mt-20'>
       <p className='text-5xl font-semibold text-gray-400'>Welcome</p>
-      <p className='text-7xl font-bold mt-8 text-gray-200'>{user.name}</p>
+      <p className='text-7xl font-bold mt-8 text-gray-200'>{user && user.name}</p>
 
       <div className='flex justify-around mt-20'>
         <div onClick={() => navigate('/admin/session')} className='relative flex justify-center items-end rounded-3xl border border-white overflow-hidden cursor-pointer'>

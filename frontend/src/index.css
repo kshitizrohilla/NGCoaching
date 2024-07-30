@@ -22,3 +22,27 @@ body {
 code {
   font-family: 'Roboto Mono', sans-serif;
 }
+
+.date-input {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  position: relative;
+  padding-right: 30px;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.date-input::-webkit-datetime-edit-year-field {
+  width: 4ch;
+}
+
+.date-input::selection {
+  background: lightcoral;
+  color: white;
+}

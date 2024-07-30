@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler');
 const Session = require('../models/sessionSchema');
 const Coach = require('../models/coachSchema');
+const Assign = require('../models/assignSchema');
 const Player = require('../models/playerSchema');
 const Exercise = require('../models/exerciseSchema')
 
@@ -39,13 +40,24 @@ const fetchPlayerSessions = asyncHandler(async (req, res) => {
     const { playerId } = req.params;
 
     try {
+        // Find the player by ID
         const player = await Player.findById(playerId);
         if (!player) {
             res.status(404);
             throw new Error('Player not found');
         }
 
-        const assignments = await Assign.find({ players: playerId }).populate('session');
+        // Find assignments for the player and populate session details and exercises
+        const assignments = await Assign.find({ players: playerId })
+            .populate({
+                path: 'session',
+                populate: {
+                    path: 'excercise',
+                    model: 'Exercise'
+                }
+            });
+
+        // Return the populated assignments
         res.status(200).json(assignments);
     } catch (error) {
         res.status(400);
@@ -64,7 +76,16 @@ const fetchCoachSessions = asyncHandler(async (req, res) => {
             throw new Error('Coach not found');
         }
 
-        const assignments = await Assign.find({ coach: coachId }).populate('session players');
+        // const assignments = await Assign.find({ coach: coachId }).populate('session players');
+        const assignments = await Assign.find({ coach: coachId })
+            .populate({
+                path: 'session',
+                populate: {
+                    path: 'excercise',
+                    model: 'Exercise'
+                }
+            })
+            .populate('players');
         res.status(200).json(assignments);
     } catch (error) {
         res.status(400);
