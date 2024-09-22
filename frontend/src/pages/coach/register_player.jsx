@@ -89,7 +89,7 @@ const RegisterPlayer = () => {
                     placeholder='••••••••••'
                 />
                 <label htmlFor='age' className='mb-1'>
-                    Select a Number
+                    Select Age
                 </label>
                 <select
                     name='age'

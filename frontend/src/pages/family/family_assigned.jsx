@@ -2,39 +2,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const PlayerAssigned = () => {
-  const [sessions, setSessions] = useState([]);
-  const [user, setUser] = useState(null);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const storedUser = localStorage.getItem('nguser');
-    if (storedUser) {
-        const player = JSON.parse(storedUser);
-        setUser(player);
-    } else {
-        navigate('/');
-    }
-  }, []);
-
-  useEffect(() => {
-      if (user) {
-        fetchAssignedSessions();
-      }
-  }, [user]);
-
-  const fetchAssignedSessions = async () => {
-    try {
-      let response = await axios.get(`/api/sessions/player/${user._id}/sessions`);
-      setSessions(response.data);
-    } catch (e) {
-      alert('Error fetching sessions');
-    }
-  };
+const FamilyAssigned = ({sessions}) => {
 
   return (
     <div className="bg-black text-white min-h-screen p-8">
-      <h1 className="text-5xl font-bold mb-8 text-white">Your Sessions</h1>
+      <h1 className="text-5xl font-bold mb-8 text-white">Player's Sessions</h1>
       <div className="space-y-8">
         {sessions.map((assignedSession, sessionIndex) => (
           <div key={assignedSession._id} className="p-4 rounded-lg shadow-lg">
@@ -79,4 +51,4 @@ const PlayerAssigned = () => {
   );
 };
 
-export default PlayerAssigned;
+export default FamilyAssigned;

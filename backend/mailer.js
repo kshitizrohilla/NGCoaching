@@ -4,14 +4,15 @@ require('dotenv').config()
 
 // Create the transporter object using environment variables
 const transporter = nodemailer.createTransport({
-  service: process.env.SERVICE_NAME,
+  host: 'smtp.ethereal.email',
+  port: 587,
   auth: {
-    user: process.env.SERVICE_EMAIL,
-    pass: process.env.SERVICE_APP_PASSWORD
+      user: 'crystel.torp@ethereal.email',
+      pass: 'FQmUhnBuD9TTtU99My'
   }
 });
 
-console.log(process.env.SERVICE_NAME);
+//console.log(process.env.SERVICE_NAME);
 
 // Export the transporter object
 module.exports = transporter;

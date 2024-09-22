@@ -65,6 +65,35 @@ const fetchPlayerSessions = asyncHandler(async (req, res) => {
     }
 });
 
+const fetchPlayerSessionsByEmail = asyncHandler(async (req, res) => {
+    const { email } = req.params;
+
+    try {
+        // Find the player by ID
+        const player = await Player.findOne({email: email});
+        if (!player) {
+            res.status(404);
+            throw new Error('Player not found');
+        }
+
+        // Find assignments for the player and populate session details and exercises
+        const assignments = await Assign.find({ players: player._id })
+            .populate({
+                path: 'session',
+                populate: {
+                    path: 'excercise',
+                    model: 'Exercise'
+                }
+            });
+
+        // Return the populated assignments
+        res.status(200).json(assignments);
+    } catch (error) {
+        res.status(400);
+        throw new Error(error.message);
+    }
+});
+
 // Fetch assigned sessions for a coach
 const fetchCoachSessions = asyncHandler(async (req, res) => {
     const { coachId } = req.params;
@@ -97,5 +126,6 @@ module.exports = {
     createSession,
     fetchAllSessions,
     fetchPlayerSessions,
+    fetchPlayerSessionsByEmail,
     fetchCoachSessions
 };

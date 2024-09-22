@@ -13,10 +13,11 @@ const CoachNav = () => {
             NG Coaching | Coach Dashboard
         </div>
         <div className='text-lg font-bold flex space-x-4 bg-transparent justify-center items-center'>
+            <div onClick={() => navigate('/coach/messages')} className='bg-transparent cursor-pointer'>Messages</div>
             <div onClick={() => navigate('/showexercise')} className='bg-transparent cursor-pointer'>All Exersices</div>
             <div onClick={() => navigate('/coach/sessions')} className='bg-transparent cursor-pointer'>Assigned Sessions</div>
             <div onClick={() => navigate('/coach/coachplayers')} className='bg-transparent cursor-pointer'>All Players</div>
-            <div onClick={logout} className='text-green-300 bg-transparent cursor-pointer'>Logout</div>
+            <div onClick={logout} className='text-red-600 rounded-full px-4 py-2 bg-blue-100 cursor-pointer'>Logout</div>
         </div>
     </div>
   )

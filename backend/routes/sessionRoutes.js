@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { createSession, fetchPlayerSessions, fetchCoachSessions, fetchAllSessions } = require('../controllers/sessionController');
+const { createSession, fetchPlayerSessions, fetchCoachSessions, fetchAllSessions, fetchPlayerSessionsByEmail } = require('../controllers/sessionController');
 
 router.post('/create', createSession);
 router.get('/all', fetchAllSessions);
 router.get('/player/:playerId/sessions', fetchPlayerSessions);
+router.get('/family/:email/sessions', fetchPlayerSessionsByEmail);
 router.get('/:coachId/sessions', fetchCoachSessions);
 
 module.exports = router;

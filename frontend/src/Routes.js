@@ -16,6 +16,9 @@ import AssignSession from './pages/coach/assign_session';
 import CoachAllSessions from './pages/coach/coach_all_sessions';
 import PlayerAssigned from './pages/player/player_assigned';
 import PlayerCalendar from './pages/player/player_calendar';
+import { FamilyDashboard } from './pages/family/family_dashboard';
+import Chat from './pages/player/player_messages';
+import CoachChat from './pages/coach/coach_chat';
 
 const AppRoutes = () => (
   <Router>
@@ -24,7 +27,7 @@ const AppRoutes = () => (
       <Route path='/admin' element={<AdminDashboard />} />
       <Route path='/coach' element={<CoachDashboard />} />
       <Route path='/player' element={<PlayerDashboard />} />
-      <Route path='/exercise' element={<CreateExerciseForm /> }/>
+      <Route path='/admin/exercise' element={<CreateExerciseForm /> }/>
       <Route path='/admin/session' element={<CreateSessionForm />} />
       <Route path='/admin/showsession' element={<ShowAllSessions />} />
       <Route path='showexercise' element={<ShowAllExercises />} />
@@ -35,6 +38,9 @@ const AppRoutes = () => (
       <Route path='/coach/sessions' element={<CoachAllSessions />} />
       <Route path='/player/sessions' element={<PlayerAssigned />} />
       <Route path='/player/calendar' element={<PlayerCalendar />} />
+      <Route path='/family' element={<FamilyDashboard />} />
+      <Route path='/player/messages' element={<Chat />} />
+      <Route path='coach/messages' element={<CoachChat/>} />
     </Routes>
   </Router>
 );

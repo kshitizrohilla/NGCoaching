@@ -1,45 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import "../global.css";
+import '../global.css';
 
-import PlayerNav from './player_nav.jsx';
-
-const PlayerCalendar = () => {
-  const [sessions, setSessions] = useState([]);
-  const [user, setUser] = useState(null);
+const FamilyCalendar = ({sessions}) => {
   const [highlightDates, setHighlightDates] = useState([]);
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-  const navigate = useNavigate();
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('nguser');
-    if (storedUser) {
-      const player = JSON.parse(storedUser);
-      setUser(player);
-    } else {
-      navigate('/');
+    if (sessions && sessions.length > 0) {
+      highlightSessionDates(sessions);
     }
-  }, [navigate]);
-
-  useEffect(() => {
-    if (user) {
-      fetchAssignedSessions();
-    }
-  }, [user]);
-
-  const fetchAssignedSessions = async () => {
-    try {
-      let response = await axios.get(`/api/sessions/player/${user._id}/sessions`);
-      console.log('Fetched from the calendar:', response.data);
-      setSessions(response.data);
-      highlightSessionDates(response.data);
-    } catch (e) {
-      alert('Error fetching sessions');
-    }
-  };
-
+  }, []);
+  
   const highlightSessionDates = (sessions) => {
     const dates = [];
     sessions.forEach(session => {
@@ -126,10 +100,9 @@ const PlayerCalendar = () => {
 
   return (
     <div>
-      <PlayerNav />
       <div id="whole-calendar" className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
         <h1 id="player-calendar-heading" className="text-2xl font-bold mb-4">Player Calendar</h1>
-        <div className="text-xl text-white py-2 px-4 rounded-full font-semibold mb-4">
+        <div id="month-year-display" className="py-2 px-4 rounded-full text-lg font-semibold mb-4">
           {getMonthName(currentMonth)} {currentYear}
         </div>
         <div id="remove-white-bg" className="flex mb-4">
@@ -147,4 +120,4 @@ const PlayerCalendar = () => {
   );
 };
 
-export default PlayerCalendar;
+export default FamilyCalendar;

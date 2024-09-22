@@ -91,7 +91,7 @@ const AssignSession = () => {
     };
 
     return (
-        <main className='w-screen h-screen flex justify-center items-center text-center'>
+        <main className='w-screen mt-14 flex justify-center items-center text-center'>
             <form className='bg-black text-white p-8 rounded-lg' onSubmit={assignSession}>
                 <div>
                     <p className='text-7xl font-extrabold'><span className='text-orange-600'>Assign</span> Session</p>

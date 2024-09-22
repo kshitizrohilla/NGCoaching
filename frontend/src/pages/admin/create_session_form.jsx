@@ -9,6 +9,7 @@ const CreateSessionForm = () => {
   const [exercises, setExercises] = useState([]);
   const [selectedExercises, setSelectedExercises] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [tag, setTag] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const CreateSessionForm = () => {
 
   const createSession = async e => {
     e.preventDefault();
-    if (name.length < 1 || selectedExercises.length < 1 || tags.length < 1) {
+    if (name.length < 1 || selectedExercises.length < 1 || tag.length < 1) {
       alert("Please fill all the details");
       return;
     }
@@ -36,7 +37,7 @@ const CreateSessionForm = () => {
       console.log("Selected Exercises before submission:", selectedExercises); // Check state before submission
       let response = await axios.post('/api/sessions/create', { 
         sessionName: name,
-        sessionTags: tags.split(',').map(tag => tag.trim()),
+        sessionTags: tag,
         exercises: selectedExercises
       });
       if (response.status === 201) {
@@ -64,7 +65,7 @@ const CreateSessionForm = () => {
   };
 
   return (
-    <main className='w-screen h-screen flex justify-center items-center text-center'>
+    <main className='w-screen mt-20 flex justify-center items-center text-center'>
       <form className='bg-black text-white' onSubmit={createSession}>
         <div>
           <p className='text-7xl font-extrabold'><span className='text-orange-600'>New</span> Session</p>
@@ -83,16 +84,26 @@ const CreateSessionForm = () => {
             placeholder='Session Name'
           />
 
-          <label htmlFor='tags' className='mb-1'>
-            Tags
-          </label>
-          <input
-            name='tags'
-            value={tags}
-            onChange={e => setTags(e.target.value)}
-            className='px-3 py-2 w-full border rounded-md border-gray-300 mb-5'
-            placeholder='Enter related tags separated by commas'
-          />
+          <label htmlFor='tag' className='mb-1'>
+                Tag
+            </label>
+            <select
+                name='tag'
+                value={tag}
+                onChange={e => setTag(e.target.value)}
+                className='px-2 py-2 border rounded-md border-gray-300 mb-5 w-full cursor-pointer'
+            >
+                <option value='' disabled>Select one tag</option>
+                <option value='Warm Up'>Admin</option>
+                <option value='Physical Work'>Physical Work</option>
+                <option value='Stretching'>Stretching</option>
+                <option value='Rondos'>Rondos</option>
+                <option value='Possesion'>Possesion</option>
+                <option value='Positional Games'>Positional Games</option>
+                <option value='Technical Exercises'>Technical Exercises</option>
+                <option value='Game Model'>Game Model</option>
+                <option value='Set Pieces'>Set Pieces</option>
+            </select>
 
           <label className='mb-1'>
             Select Exercises

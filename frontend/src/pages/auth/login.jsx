@@ -35,7 +35,7 @@ const Auth = () => {
     };
 
     return (
-        <main className='w-screen h-screen flex justify-center items-center text-center'>
+        <main className='w-screen h-screen flex flex-col justify-center items-center text-center'>
             <form className='bg-black text-white' onSubmit={loginHandler}>
                 <div>
                     <p className='text-7xl font-extrabold'><span className='text-orange-600'>NG</span> Coaching</p>
@@ -90,6 +90,11 @@ const Auth = () => {
                     {loading ? "Loading..." : 'Sign in'}
                 </button>
             </form>
+            <div className='flex'>
+                I am a
+                <div className='font-bold ml-2 cursor-pointer'
+                onClick={() => navigate('/family')}>Famiy Member</div>
+            </div>
         </main>
     );
 };

@@ -20,7 +20,7 @@ const CoachDashboard = () => {
   return (
     <div className='w-screen flex flex-col justify-center items-center'>
       <CoachNav />
-        <main className='w-screen p-20 mt-20'>
+        <main className='w-screen px-20 pt-10 mt-20'>
           <p className='text-5xl font-semibold text-gray-400'>Welcome</p>
           <p className='text-7xl font-bold mt-8 text-gray-200'>{user && user.name}</p>
 

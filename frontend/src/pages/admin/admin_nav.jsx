@@ -18,7 +18,7 @@ const AdminNav = () => {
             <div onClick={() => navigate('/showexercise')} className='bg-transparent cursor-pointer'>All Exersices</div>
             <div onClick={() => navigate('/admin/showsession')} className='bg-transparent cursor-pointer'>All Sessions</div>
             <div onClick={() => navigate('/admin/registercoach')} className='bg-transparent cursor-pointer'>Register Coach</div>
-            <div onClick={logout} className='text-blue-500 bg-transparent cursor-pointer'>Logout</div>
+            <div onClick={logout} className='text-red-600 rounded-full px-4 py-2 bg-blue-100 cursor-pointer'>Logout</div>
         </div>
     </div>
   )
